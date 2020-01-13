@@ -48,7 +48,7 @@
               <div class="head" role="contentinfo" id="respecHeader">
                 <dl>
                   <dt>Laatste aanpassing</dt>
-                  <dd>2020-01-10</dd>
+                  <dd>2020-01-13</dd>
 
                   
                   
@@ -284,8 +284,7 @@
                     <dt>Eigenschappen</dt>
                     
                     <dd>Voor deze entiteit zijn de volgende eigenschappen gedefinieerd:
-                      <a href="#Agenda%3Ais%20agenda%20voor">is agenda voor</a>, 
-                      <a href="#Agenda%3Astatus">status</a>.</dd>
+                      <a href="#Agenda%3Ais%20agenda%20voor">is agenda voor</a>.</dd>
                     
                   </dl>
                 </div>
@@ -319,20 +318,6 @@
                         <td></td>
                       </tr>
                     
-                      <tr id="Agenda%3Astatus" typeof="rdfs:Property" resource="https://data.vlaanderen.be/ns/besluitvorming#status">
-                        <td>
-                          <code property="rdfs:label">
-                            <a href="https://data.vlaanderen.be/ns/besluitvorming#status" data-toggle="tooltip" data-content="https://data.vlaanderen.be/ns/besluitvorming#status" data-placement="right">
-                            status</a>
-                          </code>
-                        </td>
-                        <td><a href="http://www.w3.org/2004/02/skos/core#Concept" data-toggle="tooltip" data-content="http://www.w3.org/2004/02/skos/core#Concept" data-placement="right">Agendastatus</a></td>
-                        <td>1</td>
-                        <td property="rdfs:comment">De status van de Agenda.</td>
-                        <td property="vann:usageNote"></td>
-                        <td></td>
-                      </tr>
-                    
                     </tbody>
                   </table>
                 </div>
@@ -349,6 +334,7 @@
                     
                     <dd>Voor deze entiteit zijn de volgende eigenschappen gedefinieerd:
                       <a href="#Agendapunt%3Aaangebracht%20na">aangebracht na</a>, 
+                      <a href="#Agendapunt%3Ais%20onderdeel%20van">is onderdeel van</a>, 
                       <a href="#Agendapunt%3Avervangt">vervangt</a>.</dd>
                     
                   </dl>
@@ -379,6 +365,20 @@
                         <td><a href="http://data.vlaanderen.be/ns/besluit#Agendapunt" data-toggle="tooltip" data-content="http://data.vlaanderen.be/ns/besluit#Agendapunt" data-placement="right">Agendapunt</a></td>
                         <td></td>
                         <td property="rdfs:comment">Het agendapunt dat op de agenda direct dit agendapunt voorafging.</td>
+                        <td property="vann:usageNote"></td>
+                        <td></td>
+                      </tr>
+                    
+                      <tr id="Agendapunt%3Ais%20onderdeel%20van" typeof="rdfs:Property" resource="https://data.vlaanderen.be/ns/besluitvorming#isOnderdeelVan">
+                        <td>
+                          <code property="rdfs:label">
+                            <a href="https://data.vlaanderen.be/ns/besluitvorming#isOnderdeelVan" data-toggle="tooltip" data-content="https://data.vlaanderen.be/ns/besluitvorming#isOnderdeelVan" data-placement="right">
+                            is onderdeel van</a>
+                          </code>
+                        </td>
+                        <td><a href="https://data.vlaanderen.be/ns/besluitvorming#Agenda" data-toggle="tooltip" data-content="https://data.vlaanderen.be/ns/besluitvorming#Agenda" data-placement="right">Agenda</a></td>
+                        <td></td>
+                        <td property="rdfs:comment">De Agenda waarvan dit Agendapunt een onderdeel is.</td>
                         <td property="vann:usageNote"></td>
                         <td></td>
                       </tr>
@@ -414,8 +414,8 @@
                     <dd>Voor deze entiteit zijn de volgende eigenschappen gedefinieerd:
                       <a href="#Behandeling%20van%20Agendapunt%3Agebeurt%20na">gebeurt na</a>, 
                       <a href="#Behandeling%20van%20Agendapunt%3Ageeft%20aanleiding%20tot">geeft aanleiding tot</a>, 
-                      <a href="#Behandeling%20van%20Agendapunt%3Aheeft%20onderwerp">heeft onderwerp</a>, 
-                      <a href="#Behandeling%20van%20Agendapunt%3Aopenbaar">openbaar</a>.</dd>
+                      <a href="#Behandeling%20van%20Agendapunt%3Aheeft%20beslissing">heeft beslissing</a>, 
+                      <a href="#Behandeling%20van%20Agendapunt%3Aheeft%20onderwerp">heeft onderwerp</a>.</dd>
                     
                   </dl>
                 </div>
@@ -463,6 +463,20 @@
                         <td></td>
                       </tr>
                     
+                      <tr id="Behandeling%20van%20Agendapunt%3Aheeft%20beslissing" typeof="rdfs:Property" resource="https://data.vlaanderen.be/ns/besluitvorming#heeftBeslissing">
+                        <td>
+                          <code property="rdfs:label">
+                            <a href="https://data.vlaanderen.be/ns/besluitvorming#heeftBeslissing" data-toggle="tooltip" data-content="https://data.vlaanderen.be/ns/besluitvorming#heeftBeslissing" data-placement="right">
+                            heeft beslissing</a>
+                          </code>
+                        </td>
+                        <td><a href="https://data.vlaanderen.be/ns/besluitvorming#Beslissing" data-toggle="tooltip" data-content="https://data.vlaanderen.be/ns/besluitvorming#Beslissing" data-placement="right">Beslissing</a></td>
+                        <td>0...*</td>
+                        <td property="rdfs:comment">De Beslissing die volgt uit de Behandeling van het Agendapunt.</td>
+                        <td property="vann:usageNote"></td>
+                        <td></td>
+                      </tr>
+                    
                       <tr id="Behandeling%20van%20Agendapunt%3Aheeft%20onderwerp" typeof="rdfs:Property" resource="http://purl.org/dc/terms/subject">
                         <td>
                           <code property="rdfs:label">
@@ -473,20 +487,6 @@
                         <td><a href="http://data.vlaanderen.be/ns/besluit#Agendapunt" data-toggle="tooltip" data-content="http://data.vlaanderen.be/ns/besluit#Agendapunt" data-placement="right">Agendapunt</a></td>
                         <td></td>
                         <td property="rdfs:comment">Het onderwerp van de activiteit.</td>
-                        <td property="vann:usageNote"></td>
-                        <td></td>
-                      </tr>
-                    
-                      <tr id="Behandeling%20van%20Agendapunt%3Aopenbaar" typeof="rdfs:Property" resource="http://data.vlaanderen.be/ns/besluit#openbaar">
-                        <td>
-                          <code property="rdfs:label">
-                            <a href="http://data.vlaanderen.be/ns/besluit#openbaar" data-toggle="tooltip" data-content="http://data.vlaanderen.be/ns/besluit#openbaar" data-placement="right">
-                            openbaar</a>
-                          </code>
-                        </td>
-                        <td><a href="http://www.w3.org/2001/XMLSchema#boolean" data-toggle="tooltip" data-content="http://www.w3.org/2001/XMLSchema#boolean" data-placement="right">Boolean</a></td>
-                        <td>1</td>
-                        <td property="rdfs:comment">Geeft aan of de bespreking effectief openbaar verlopen is.</td>
                         <td property="vann:usageNote"></td>
                         <td></td>
                       </tr>
@@ -556,11 +556,45 @@
                     
                     <dt>Eigenschappen</dt>
                     
-                    <dd>Voor deze entiteit zijn geen eigenschappen gedefinieerd.</dd>
+                    <dd>Voor deze entiteit zijn de volgende eigenschappen gedefinieerd:
+                      <a href="#Besluit%3Aheeft%20bijlage">heeft bijlage</a>.</dd>
                     
                   </dl>
                 </div>
                 
+                <div class="u-table-overflow">
+                  <table class="data-table">
+                    <thead>
+                      <tr class="data-table__header">
+                        <th class="data-table__header-title--sortable data-table__header-title--sortable-active">Eigenschap</th>
+                        <th class="data-table__header-title--sortable">Verwacht Type</th>
+                        <th class="data-table__header-title--sortable">Kardinaliteit</th>
+                        <th class="data-table__header-title--sortable">Beschrijving</th>
+                        <th class="data-table__header-title--sortable">Gebruik</th>
+                        <th class="data-table__header-title--sortable">Codelijst</th>
+                      </tr>
+                    </thead>
+
+                    <tbody class="supertype">
+                    
+                      <tr id="Besluit%3Aheeft%20bijlage" typeof="rdfs:Property" resource="https://data.vlaanderen.be/ns/besluitvorming#heeftBijlage">
+                        <td>
+                          <code property="rdfs:label">
+                            <a href="https://data.vlaanderen.be/ns/besluitvorming#heeftBijlage" data-toggle="tooltip" data-content="https://data.vlaanderen.be/ns/besluitvorming#heeftBijlage" data-placement="right">
+                            heeft bijlage</a>
+                          </code>
+                        </td>
+                        <td><a href="http://data.vlaanderen.be/ns/dossier#Stuk" data-toggle="tooltip" data-content="http://data.vlaanderen.be/ns/dossier#Stuk" data-placement="right">Stuk</a></td>
+                        <td></td>
+                        <td property="rdfs:comment">Een Besluit heeft een Stuk als bijlage.</td>
+                        <td property="vann:usageNote"></td>
+                        <td></td>
+                      </tr>
+                    
+                    </tbody>
+                  </table>
+                </div>
+      			  
             </div>
             
             <div class="region region--no-space-top">
@@ -715,7 +749,8 @@
                     <dt>Eigenschappen</dt>
                     
                     <dd>Voor deze entiteit zijn de volgende eigenschappen gedefinieerd:
-                      <a href="#Procedurestap%3Agebruikt">gebruikt</a>.</dd>
+                      <a href="#Procedurestap%3Agebruikt">gebruikt</a>, 
+                      <a href="#Procedurestap%3Ais%20gerelateerd%20aan">is gerelateerd aan</a>.</dd>
                     
                   </dl>
                 </div>
@@ -735,16 +770,30 @@
 
                     <tbody class="supertype">
                     
-                      <tr id="Procedurestap%3Agebruikt" typeof="rdfs:Property" resource="http://data.vlaanderen.be/ns/dossier#gebruikt">
+                      <tr id="Procedurestap%3Agebruikt" typeof="rdfs:Property" resource="https://data.vlaanderen.be/ns/besluitvorming#gebruikt">
                         <td>
                           <code property="rdfs:label">
-                            <a href="http://data.vlaanderen.be/ns/dossier#gebruikt" data-toggle="tooltip" data-content="http://data.vlaanderen.be/ns/dossier#gebruikt" data-placement="right">
+                            <a href="https://data.vlaanderen.be/ns/besluitvorming#gebruikt" data-toggle="tooltip" data-content="https://data.vlaanderen.be/ns/besluitvorming#gebruikt" data-placement="right">
                             gebruikt</a>
                           </code>
                         </td>
                         <td><a href="http://data.vlaanderen.be/ns/dossier#Stuk" data-toggle="tooltip" data-content="http://data.vlaanderen.be/ns/dossier#Stuk" data-placement="right">Stuk</a></td>
                         <td></td>
                         <td property="rdfs:comment">Een Procedurestap gebruikt een Stuk als input.</td>
+                        <td property="vann:usageNote"></td>
+                        <td></td>
+                      </tr>
+                    
+                      <tr id="Procedurestap%3Ais%20gerelateerd%20aan" typeof="rdfs:Property" resource="https://data.vlaanderen.be/ns/besluitvorming#isGerelateerdAan">
+                        <td>
+                          <code property="rdfs:label">
+                            <a href="https://data.vlaanderen.be/ns/besluitvorming#isGerelateerdAan" data-toggle="tooltip" data-content="https://data.vlaanderen.be/ns/besluitvorming#isGerelateerdAan" data-placement="right">
+                            is gerelateerd aan</a>
+                          </code>
+                        </td>
+                        <td><a href="http://data.vlaanderen.be/ns/besluit#Agendapunt" data-toggle="tooltip" data-content="http://data.vlaanderen.be/ns/besluit#Agendapunt" data-placement="right">Agendapunt</a></td>
+                        <td></td>
+                        <td property="rdfs:comment">Een Procedurestap is gerelateerd aan een Agendapunt.</td>
                         <td property="vann:usageNote"></td>
                         <td></td>
                       </tr>
@@ -764,6 +813,8 @@
                     <dt>Eigenschappen</dt>
                     
                     <dd>Voor deze entiteit zijn de volgende eigenschappen gedefinieerd:
+                      <a href="#Stuk%3Aheeft%20vertaling">heeft vertaling</a>, 
+                      <a href="#Stuk%3Ais%20gerelateerd%20aan">is gerelateerd aan</a>, 
                       <a href="#Stuk%3Ais%20resultaat%20van">is resultaat van</a>, 
                       <a href="#Stuk%3Avervangt">vervangt</a>.</dd>
                     
@@ -785,10 +836,38 @@
 
                     <tbody class="supertype">
                     
-                      <tr id="Stuk%3Ais%20resultaat%20van" typeof="rdfs:Property" resource="http://data.vlaanderen.be/ns/dossier#isResultaatVan">
+                      <tr id="Stuk%3Aheeft%20vertaling" typeof="rdfs:Property" resource="https://data.vlaanderen.be/ns/besluitvorming#heeftVertaling">
                         <td>
                           <code property="rdfs:label">
-                            <a href="http://data.vlaanderen.be/ns/dossier#isResultaatVan" data-toggle="tooltip" data-content="http://data.vlaanderen.be/ns/dossier#isResultaatVan" data-placement="right">
+                            <a href="https://data.vlaanderen.be/ns/besluitvorming#heeftVertaling" data-toggle="tooltip" data-content="https://data.vlaanderen.be/ns/besluitvorming#heeftVertaling" data-placement="right">
+                            heeft vertaling</a>
+                          </code>
+                        </td>
+                        <td><a href="http://data.vlaanderen.be/ns/dossier#Stuk" data-toggle="tooltip" data-content="http://data.vlaanderen.be/ns/dossier#Stuk" data-placement="right">Stuk</a></td>
+                        <td></td>
+                        <td property="rdfs:comment">Het Stuk dat de vertaling is van een ander Stuk.</td>
+                        <td property="vann:usageNote"></td>
+                        <td></td>
+                      </tr>
+                    
+                      <tr id="Stuk%3Ais%20gerelateerd%20aan" typeof="rdfs:Property" resource="https://data.vlaanderen.be/ns/besluitvorming#isGerelateerdAan">
+                        <td>
+                          <code property="rdfs:label">
+                            <a href="https://data.vlaanderen.be/ns/besluitvorming#isGerelateerdAan" data-toggle="tooltip" data-content="https://data.vlaanderen.be/ns/besluitvorming#isGerelateerdAan" data-placement="right">
+                            is gerelateerd aan</a>
+                          </code>
+                        </td>
+                        <td><a href="http://data.vlaanderen.be/ns/besluit#Agendapunt" data-toggle="tooltip" data-content="http://data.vlaanderen.be/ns/besluit#Agendapunt" data-placement="right">Agendapunt</a></td>
+                        <td></td>
+                        <td property="rdfs:comment">Een Stuk is een bijlage bij een Agendapunt.</td>
+                        <td property="vann:usageNote"></td>
+                        <td></td>
+                      </tr>
+                    
+                      <tr id="Stuk%3Ais%20resultaat%20van" typeof="rdfs:Property" resource="https://data.vlaanderen.be/ns/besluitvorming#isResultaatVan">
+                        <td>
+                          <code property="rdfs:label">
+                            <a href="https://data.vlaanderen.be/ns/besluitvorming#isResultaatVan" data-toggle="tooltip" data-content="https://data.vlaanderen.be/ns/besluitvorming#isResultaatVan" data-placement="right">
                             is resultaat van</a>
                           </code>
                         </td>
@@ -828,6 +907,7 @@
                     <dt>Eigenschappen</dt>
                     
                     <dd>Voor deze entiteit zijn de volgende eigenschappen gedefinieerd:
+                      <a href="#Vergaderactiviteit%3Aheeft%20notulen">heeft notulen</a>, 
                       <a href="#Vergaderactiviteit%3Ais%20gehouden%20door">is gehouden door</a>.</dd>
                     
                   </dl>
@@ -847,6 +927,20 @@
                     </thead>
 
                     <tbody class="supertype">
+                    
+                      <tr id="Vergaderactiviteit%3Aheeft%20notulen" typeof="rdfs:Property" resource="https://data.vlaanderen.be/ns/besluitvorming#heeftNotulen">
+                        <td>
+                          <code property="rdfs:label">
+                            <a href="https://data.vlaanderen.be/ns/besluitvorming#heeftNotulen" data-toggle="tooltip" data-content="https://data.vlaanderen.be/ns/besluitvorming#heeftNotulen" data-placement="right">
+                            heeft notulen</a>
+                          </code>
+                        </td>
+                        <td><a href="http://data.vlaanderen.be/ns/dossier#Stuk" data-toggle="tooltip" data-content="http://data.vlaanderen.be/ns/dossier#Stuk" data-placement="right">Stuk</a></td>
+                        <td></td>
+                        <td property="rdfs:comment">De notulen van een Vergaderactiviteit.</td>
+                        <td property="vann:usageNote"></td>
+                        <td></td>
+                      </tr>
                     
                       <tr id="Vergaderactiviteit%3Ais%20gehouden%20door" typeof="rdfs:Property" resource="http://data.vlaanderen.be/ns/besluit#isGehoudenDoor">
                         <td>

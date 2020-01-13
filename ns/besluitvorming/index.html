@@ -45,7 +45,7 @@
                         
                         <dt>Laatste aanpassing</dt>
 
-                        <dd>2020-01-10
+                        <dd>2020-01-13
                         </dd>
                         
 
@@ -337,13 +337,27 @@
                                             
                                             <a href="#doorloopt" rel="property">doorloopt (Besluitvormingsaangelegenheid)</a> |
                                             
+                                            <a href="#gebruikt" rel="property">gebruikt</a> |
+                                            
                                             <a href="#heeftAanleiding" rel="property">heeft aanleiding (Besluitvormingsaangelegenheid)</a> |
+                                            
+                                            <a href="#heeftBeslissing" rel="property">heeft beslissing</a> |
                                             
                                             <a href="#heeftBesluit" rel="property">heeft besluit (Beslissing)</a> |
                                             
+                                            <a href="#heeftBijlage" rel="property">heeft bijlage</a> |
+                                            
+                                            <a href="#heeftNotulen" rel="property">heeft notulen</a> |
+                                            
+                                            <a href="#heeftVertaling" rel="property">heeft vertaling</a> |
+                                            
                                             <a href="#isAgendaVoor" rel="property">is agenda voor (Agenda)</a> |
                                             
-                                            <a href="#status" rel="property">status (Agenda)</a> |
+                                            <a href="#isGerelateerdAan" rel="property">is gerelateerd aan</a> |
+                                            
+                                            <a href="#isOnderdeelVan" rel="property">is onderdeel van</a> |
+                                            
+                                            <a href="#isResultaatVan" rel="property">is resultaat van</a> |
                                             
                                             <a href="#vervangt" rel="property">vervangt</a> |
                                             
@@ -442,7 +456,10 @@
 											<td><ul>
 											
 											
+<<<<<<< HEAD
+=======
 											
+>>>>>>> 9401e88dd9d097efb2a6c75216a822f291dbe71d
                                               <li><code>http://www.w3.org/ns/prov#Activity</code></li>
 											
                                             </ul></td>
@@ -546,6 +563,42 @@
                                 
                                 
                                 <div class="region region--no-space-top">
+                                    <h3 class="h3"  id="gebruikt">Eigenschap <em>gebruikt</em></h3>
+                                    <table class="definition">
+                                        <tbody>
+                                          <tr>
+                                            <th>Type</th>
+                                            <td>Eigenschap</td>
+                                          </tr>
+                                          
+                                          <tr>
+                                            <th>URI</th>
+                                            <td><code>https://data.vlaanderen.be/ns/besluitvorming#gebruikt</code></td>
+                                          </tr>
+                                          
+                                          <tr>
+                                            <th>Domein</th>
+                                            <td><code>http://data.vlaanderen.be/ns/dossier#Procedurestap</code></td>
+                                          </tr>
+                                          
+                                          
+                                          <tr>
+                                            <th>Bereik</th>
+                                            <td><code>http://data.vlaanderen.be/ns/dossier#Stuk</code></td>
+                                          </tr>
+                                          
+                                          
+                                          <tr>
+                                            <th>Definitie</th>
+                                            <td>Een Procedurestap gebruikt een Stuk als input.</td>
+                                          </tr>
+                                          
+                                        </tbody>
+                                    </table>
+                                </div>
+                                
+                                
+                                <div class="region region--no-space-top">
                                     <h3 class="h3"  id="heeftAanleiding">Eigenschap <em>heeft aanleiding</em></h3>
                                     <table class="definition">
                                         <tbody>
@@ -574,6 +627,42 @@
                                           <tr>
                                             <th>Definitie</th>
                                             <td>De motivatie voor het opstarten van de Besluitvormingsaangelegenheid.</td>
+                                          </tr>
+                                          
+                                        </tbody>
+                                    </table>
+                                </div>
+                                
+                                
+                                <div class="region region--no-space-top">
+                                    <h3 class="h3"  id="heeftBeslissing">Eigenschap <em>heeft beslissing</em></h3>
+                                    <table class="definition">
+                                        <tbody>
+                                          <tr>
+                                            <th>Type</th>
+                                            <td>Eigenschap</td>
+                                          </tr>
+                                          
+                                          <tr>
+                                            <th>URI</th>
+                                            <td><code>https://data.vlaanderen.be/ns/besluitvorming#heeftBeslissing</code></td>
+                                          </tr>
+                                          
+                                          <tr>
+                                            <th>Domein</th>
+                                            <td><code>http://data.vlaanderen.be/ns/besluit#BehandelingVanAgendapunt</code></td>
+                                          </tr>
+                                          
+                                          
+                                          <tr>
+                                            <th>Bereik</th>
+                                            <td><code>https://data.vlaanderen.be/ns/besluitvorming#Beslissing</code></td>
+                                          </tr>
+                                          
+                                          
+                                          <tr>
+                                            <th>Definitie</th>
+                                            <td>De Beslissing die volgt uit de Behandeling van het Agendapunt.</td>
                                           </tr>
                                           
                                         </tbody>
@@ -618,6 +707,114 @@
                                 
                                 
                                 <div class="region region--no-space-top">
+                                    <h3 class="h3"  id="heeftBijlage">Eigenschap <em>heeft bijlage</em></h3>
+                                    <table class="definition">
+                                        <tbody>
+                                          <tr>
+                                            <th>Type</th>
+                                            <td>Eigenschap</td>
+                                          </tr>
+                                          
+                                          <tr>
+                                            <th>URI</th>
+                                            <td><code>https://data.vlaanderen.be/ns/besluitvorming#heeftBijlage</code></td>
+                                          </tr>
+                                          
+                                          <tr>
+                                            <th>Domein</th>
+                                            <td><code>http://data.vlaanderen.be/ns/besluit#Besluit</code></td>
+                                          </tr>
+                                          
+                                          
+                                          <tr>
+                                            <th>Bereik</th>
+                                            <td><code>http://data.vlaanderen.be/ns/dossier#Stuk</code></td>
+                                          </tr>
+                                          
+                                          
+                                          <tr>
+                                            <th>Definitie</th>
+                                            <td>Een Besluit heeft een Stuk als bijlage.</td>
+                                          </tr>
+                                          
+                                        </tbody>
+                                    </table>
+                                </div>
+                                
+                                
+                                <div class="region region--no-space-top">
+                                    <h3 class="h3"  id="heeftNotulen">Eigenschap <em>heeft notulen</em></h3>
+                                    <table class="definition">
+                                        <tbody>
+                                          <tr>
+                                            <th>Type</th>
+                                            <td>Eigenschap</td>
+                                          </tr>
+                                          
+                                          <tr>
+                                            <th>URI</th>
+                                            <td><code>https://data.vlaanderen.be/ns/besluitvorming#heeftNotulen</code></td>
+                                          </tr>
+                                          
+                                          <tr>
+                                            <th>Domein</th>
+                                            <td><code>http://data.vlaanderen.be/ns/besluit#Vergaderactiviteit</code></td>
+                                          </tr>
+                                          
+                                          
+                                          <tr>
+                                            <th>Bereik</th>
+                                            <td><code>http://data.vlaanderen.be/ns/dossier#Stuk</code></td>
+                                          </tr>
+                                          
+                                          
+                                          <tr>
+                                            <th>Definitie</th>
+                                            <td>De notulen van een Vergaderactiviteit.</td>
+                                          </tr>
+                                          
+                                        </tbody>
+                                    </table>
+                                </div>
+                                
+                                
+                                <div class="region region--no-space-top">
+                                    <h3 class="h3"  id="heeftVertaling">Eigenschap <em>heeft vertaling</em></h3>
+                                    <table class="definition">
+                                        <tbody>
+                                          <tr>
+                                            <th>Type</th>
+                                            <td>Eigenschap</td>
+                                          </tr>
+                                          
+                                          <tr>
+                                            <th>URI</th>
+                                            <td><code>https://data.vlaanderen.be/ns/besluitvorming#heeftVertaling</code></td>
+                                          </tr>
+                                          
+                                          <tr>
+                                            <th>Domein</th>
+                                            <td><code>http://data.vlaanderen.be/ns/dossier#Stuk</code></td>
+                                          </tr>
+                                          
+                                          
+                                          <tr>
+                                            <th>Bereik</th>
+                                            <td><code>http://data.vlaanderen.be/ns/dossier#Stuk</code></td>
+                                          </tr>
+                                          
+                                          
+                                          <tr>
+                                            <th>Definitie</th>
+                                            <td>Het Stuk dat de vertaling is van een ander Stuk.</td>
+                                          </tr>
+                                          
+                                        </tbody>
+                                    </table>
+                                </div>
+                                
+                                
+                                <div class="region region--no-space-top">
                                     <h3 class="h3"  id="isAgendaVoor">Eigenschap <em>is agenda voor</em></h3>
                                     <table class="definition">
                                         <tbody>
@@ -654,7 +851,7 @@
                                 
                                 
                                 <div class="region region--no-space-top">
-                                    <h3 class="h3"  id="status">Eigenschap <em>status</em></h3>
+                                    <h3 class="h3"  id="isGerelateerdAan">Eigenschap <em>is gerelateerd aan</em></h3>
                                     <table class="definition">
                                         <tbody>
                                           <tr>
@@ -664,24 +861,96 @@
                                           
                                           <tr>
                                             <th>URI</th>
-                                            <td><code>https://data.vlaanderen.be/ns/besluitvorming#status</code></td>
+                                            <td><code>https://data.vlaanderen.be/ns/besluitvorming#isGerelateerdAan</code></td>
                                           </tr>
                                           
                                           <tr>
                                             <th>Domein</th>
-                                            <td><code>https://data.vlaanderen.be/ns/besluitvorming#Agenda</code></td>
+                                            <td><code>http://www.w3.org/2000/01/rdf-schema#Resource</code></td>
                                           </tr>
                                           
                                           
                                           <tr>
                                             <th>Bereik</th>
-                                            <td><code>http://www.w3.org/2004/02/skos/core#Concept</code></td>
+                                            <td><code>http://data.vlaanderen.be/ns/besluit#Agendapunt</code></td>
                                           </tr>
                                           
                                           
                                           <tr>
                                             <th>Definitie</th>
-                                            <td>De status van de Agenda.</td>
+                                            <td>Iets is gerelateerd aan een Agendapunt.</td>
+                                          </tr>
+                                          
+                                        </tbody>
+                                    </table>
+                                </div>
+                                
+                                
+                                <div class="region region--no-space-top">
+                                    <h3 class="h3"  id="isOnderdeelVan">Eigenschap <em>is onderdeel van</em></h3>
+                                    <table class="definition">
+                                        <tbody>
+                                          <tr>
+                                            <th>Type</th>
+                                            <td>Eigenschap</td>
+                                          </tr>
+                                          
+                                          <tr>
+                                            <th>URI</th>
+                                            <td><code>https://data.vlaanderen.be/ns/besluitvorming#isOnderdeelVan</code></td>
+                                          </tr>
+                                          
+                                          <tr>
+                                            <th>Domein</th>
+                                            <td><code>http://data.vlaanderen.be/ns/besluit#Agendapunt</code></td>
+                                          </tr>
+                                          
+                                          
+                                          <tr>
+                                            <th>Bereik</th>
+                                            <td><code>https://data.vlaanderen.be/ns/besluitvorming#Agenda</code></td>
+                                          </tr>
+                                          
+                                          
+                                          <tr>
+                                            <th>Definitie</th>
+                                            <td>De Agenda waarvan dit Agendapunt een onderdeel is.</td>
+                                          </tr>
+                                          
+                                        </tbody>
+                                    </table>
+                                </div>
+                                
+                                
+                                <div class="region region--no-space-top">
+                                    <h3 class="h3"  id="isResultaatVan">Eigenschap <em>is resultaat van</em></h3>
+                                    <table class="definition">
+                                        <tbody>
+                                          <tr>
+                                            <th>Type</th>
+                                            <td>Eigenschap</td>
+                                          </tr>
+                                          
+                                          <tr>
+                                            <th>URI</th>
+                                            <td><code>https://data.vlaanderen.be/ns/besluitvorming#isResultaatVan</code></td>
+                                          </tr>
+                                          
+                                          <tr>
+                                            <th>Domein</th>
+                                            <td><code>http://data.vlaanderen.be/ns/dossier#Stuk</code></td>
+                                          </tr>
+                                          
+                                          
+                                          <tr>
+                                            <th>Bereik</th>
+                                            <td><code>http://data.vlaanderen.be/ns/dossier#Procedurestap</code></td>
+                                          </tr>
+                                          
+                                          
+                                          <tr>
+                                            <th>Definitie</th>
+                                            <td>Een Stuk is de output van een Procedurestap.</td>
                                           </tr>
                                           
                                         </tbody>
@@ -738,9 +1007,23 @@
                                 </div>
 
                                 
+                                
+                                
+                                
                                 <div class="region region--no-space-top">
-                                    <p>In dit vocabularium zijn geen externe termen hergebruikt.</p>
+                                    <h3 class="h4" id="#statuswijzigingObject"><em>heeft gegenereerd</em></h3>
+                                    <table class="definition">
+                                        <tbody>
+                                          
+                                          <tr>
+                                            <th>URI</th>
+                                            <td><code>http://www.w3.org/ns/prov#generated</code></td>
+                                          </tr>
+                                          
+                                        </tbody>
+                                    </table>
                                 </div>
+                                
                                 
 
                             </section>
